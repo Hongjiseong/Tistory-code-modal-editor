@@ -1,0 +1,182 @@
+.detail-desc .code-post ul, .detail-desc .code-post li {
+  padding: 0;
+}
+
+.detail-desc .code-post pre {
+	margin:0;
+}
+
+.detail-desc .code-post,
+.detail-desc .code-post h2,
+.detail-desc .code-post div {
+	font-family: 'Rubik', 'Nanum Gothic Coding', monospace;
+	font-size: 16px;
+	/* font-weight: bold; */
+}
+
+.code-post {
+  background-color: #ddd;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+}
+.code-post>article {
+  float: left;
+  height: 100%;
+}
+.code-post .side {
+  position: relative;
+  flex: 2.5;
+  background-color: rgb(33, 37, 43);
+}
+
+.code-post .side h2 {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  color: #dbdbdb;
+  height: 44px;
+  width: 94%;
+  line-height: 44px;
+  padding-left: 20px;
+  background-color: rgb(33, 37, 43);
+  font-weight: bold;
+}
+.code-post .side a {
+  color: #dbdbdb;
+}
+.code-post .side h2 span:first-child {
+  padding-right: 12px;
+}
+.code-post .side span.js-add-folder,
+.code-post .side span.js-add-file,
+.code-post .side span.js-remove {
+  cursor: pointer;
+  float: right;
+  padding-right: 5px;
+}
+.code-post .side>ul {
+  position: absolute;
+  top: 0;
+  padding-top: 54px !important;
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.code-post .side ul li {
+  position: relative;
+  padding-left: 20px;
+}
+.code-post .side ul li .editable {
+  display: inline-block;
+}
+.code-post .side ul li a {
+  color: #dbdbdb;
+  padding: 7px 10px 7px 0px;
+  display: block;
+}
+
+.code-post .code {
+  position: relative;
+  flex: 7;
+  background-color: rgb(40, 44, 52);
+  box-sizing: border-box;
+}
+.code-post .code h2 {
+  height: 44px;
+  line-height: 44px;
+  padding-left: 20px;
+  color: #dbdbdb;
+  position: absolute;
+  width: 100%;
+  background-color: rgb(40, 44, 52);
+  top: 0;
+  z-index: 10;
+  box-sizing: border-box;
+}
+.code-post .code h2 .file-name {
+  display:inline-block;
+}
+.code-post .code h2 span.confirm {
+  float: right;
+  margin-right: 20px;
+  border: 1px solid #dbdbdb;
+  display: block;
+  text-align: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  line-height: 28px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+.code-post .code h2 span:hover {
+  background-color: #fff;
+  color: #202020;
+  transition: all .3s;
+}
+
+.code-post .code pre {
+  display: none !important;
+  position: absolute !important;
+  padding-top: 54px !important;
+  padding-left: 20px !important;
+  padding-bottom: 20px;
+  width: 100% !important;
+  height: 100vh !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  color: #fff !important;
+  background-color: rgb(40, 44, 52) !important;
+  overflow: auto !important;
+}
+
+.code-post .code pre.on {
+	display: block !important;
+}
+
+
+/* .code-post .code pre {
+  display: none;
+  position: absolute;
+  padding-top: 54px;
+  padding-left: 20px;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  outline: none;
+  color: #fff;
+  background-color: rgb(40, 44, 52);
+  overflow: auto;
+}
+.code-post .code pre.on {
+  display: block;
+} */
+
+.code-post .code pre.on>div>div {
+  font-size: 20px;
+  padding: 4px 0;
+}
+.code-post .code pre.on>div>div span {
+  line-height: 1.2;
+}
+.code-post .code pre.on>div>div:hover {
+  background-color: #ffffff11;
+  cursor: pointer;
+}
+
+
+.code-post .comment {
+  background-color: #c2c2c266;
+  transition: flex .5s;
+}
+.code-post .comment.on {
+  flex: 3;
+  transition: flex .5s;
+}
