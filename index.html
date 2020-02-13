@@ -12,8 +12,10 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
 </head>
 <body>
+  <input id="target" value=""/>
   <section class="code-post clear">
     <article id="side" class="side">
       <h2 class="clear">Explorer 
@@ -26,6 +28,7 @@
       <h2>
         <div class="file-name"></div>
         <span class="confirm js-fix">V</span>
+        <button id="copy" data-clipboard-target="#target">Copy</button>
       </h2>
     </article>
     <article class="comment"></article>
@@ -33,5 +36,11 @@
 </body>
 <script src="./code.js"></script>
 <script>
+  new ClipboardJS('#copy');
+  $("#copy").on("click", function(){
+    var copyHTML = $('.code-post')[0].outerHTML;
+    $("#target").val(copyHTML);
+    alert('Copied');
+  });
 </script>
 </html>

@@ -170,8 +170,6 @@
   background-color: #ffffff11;
   cursor: pointer;
 }
-
-
 .code-post .comment {
   background-color: #c2c2c266;
   transition: flex .5s;
@@ -179,4 +177,19 @@
 .code-post .comment.on {
   flex: 3;
   transition: flex .5s;
+}
+
+#copy {
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  padding: 7px 15px;
+  color: #dbdbdb;
+  background-color: rgb(40, 44, 52);
+}
+#copy:hover {
+  border: 1px solid rgb(40, 44, 52);
+  background-color: #dbdbdb;
+  color: rgb(40, 44, 52);
+  transition: all .3s;
+  cursor: pointer;
 }
